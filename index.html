@@ -1,0 +1,152 @@
+<!DOCTYPE html>
+<html lang="es">
+	<head>
+		<meta charset="UTF-8" />
+		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+		<title>Form validation</title>
+		<link rel="stylesheet" href="css/styles.css" />
+	</head>
+	<body>
+		<main>
+			<form action="register.php" id="form" method="post">
+				<!-- Username -->
+				<div class="form-group" id="username-group">
+					<label for="username" class="form-label">Usuario</label>
+					<div class="input-group">
+						<input
+							type="text"
+							name="username"
+							id="username"
+							class="form-input"
+							placeholder="user123_"
+							maxlength="14"
+						/>
+						<i class="is-invalid fas fa-times-circle"></i>
+					</div>
+					<p class="invalid-feedback">
+						Debe tener entre 7 y 14 caracteres y puede contener letras, números,
+						guion y guion bajo.
+					</p>
+				</div>
+
+				<!-- Name -->
+				<div class="form-group" id="name-group">
+					<label for="name" class="form-label">Nombre</label>
+					<div class="input-group">
+						<input
+							type="text"
+							name="name"
+							id="name"
+							placeholder="Carlos Astorga"
+							class="form-input"
+							maxlength="40"
+						/>
+						<i class="is-invalid fas fa-times-circle"></i>
+					</div>
+					<p class="invalid-feedback">
+						Maximo 40 caracteres, no se permite el uso de simbolos o números.
+					</p>
+				</div>
+
+				<!-- Password -->
+				<div class="form-group" id="password-group">
+					<label for="password" class="form-label">Contraseña</label>
+					<div class="input-group">
+						<input
+							type="password"
+							name="password"
+							id="password"
+							class="form-input"
+						/>
+						<i class="is-invalid fas fa-times-circle"></i>
+					</div>
+					<p class="invalid-feedback">
+						La contraseña debe ser entre 4 a 12 caracteres.
+					</p>
+				</div>
+
+				<!-- Password confirm -->
+				<div class="form-group" id="password2-group">
+					<label for="password2" class="form-label">Repetir Contraseña</label>
+					<div class="input-group">
+						<input
+							type="password"
+							name="password2"
+							id="password2"
+							class="form-input"
+						/>
+						<i class="is-invalid fas fa-times-circle"></i>
+					</div>
+					<p class="invalid-feedback">
+						Ambas contraseñas deben ser iguales.
+					</p>
+				</div>
+
+				<!-- Email -->
+				<div class="form-group" id="email-group">
+					<label for="email" class="form-label">Correo</label>
+					<div class="input-group">
+						<input
+							type="email"
+							name="email"
+							id="email"
+							class="form-input"
+							placeholder="correo@correo.com"
+						/>
+						<i class="is-invalid fas fa-times-circle"></i>
+					</div>
+					<p class="invalid-feedback">
+						Ingresa una dirección de correo válida.
+					</p>
+				</div>
+
+				<!-- Telephone -->
+				<div class="form-group" id="telephone-group">
+					<label for="telephone" class="form-label">Teléfono</label>
+					<div class="input-group">
+						<input
+							type="text"
+							name="telephone"
+							id="telephone"
+							class="form-input"
+							placeholder="458561215"
+							maxlength="14"
+						/>
+						<i class="is-invalid fas fa-times-circle"></i>
+					</div>
+					<p class="invalid-feedback">
+						Solo puede contener números y el máximo son 14 digitos.
+					</p>
+				</div>
+
+				<!-- Terms and conditions -->
+				<div class="form-group" id="terms-group">
+					<label for="terms" class="form-label">
+						<input type="checkbox" name="terms" id="terms" />
+						Acepto los términos y condiciones.
+					</label>
+				</div>
+
+				<div class="message" id="message">
+					<p>
+						<i class="fas fa-exclamation-triangle"></i> <b>Error:</b> Rellena
+						todos los campos
+					</p>
+				</div>
+
+				<div class="form-group btn-send">
+					<button class="btn">Enviar</button>
+					<p class="success" id="success">
+						Formulario enviado exitosamente
+					</p>
+				</div>
+			</form>
+		</main>
+
+		<script src="js/scripts.js"></script>
+		<script
+			src="https://kit.fontawesome.com/f28e386e36.js"
+			crossorigin="anonymous"
+		></script>
+	</body>
+</html>

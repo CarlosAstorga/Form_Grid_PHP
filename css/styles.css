@@ -1,0 +1,162 @@
+* {
+	box-sizing: border-box;
+}
+
+body {
+	background-color: #f0f0f0;
+}
+main {
+	max-width: 800px;
+	widows: 90%;
+	margin: auto;
+	padding: 40px;
+}
+
+form {
+	display: grid;
+	grid-template-columns: 1fr 1fr;
+	gap: 20px;
+}
+
+.form-label {
+	display: block;
+	font-weight: 700;
+	padding: 10px;
+	cursor: pointer;
+}
+
+.input-group {
+	position: relative;
+}
+
+.form-input {
+	width: 100%;
+	background: #fff;
+	border: 3px solid transparent;
+	border-radius: 3px;
+	height: 45px;
+	line-height: 45px;
+	padding: 0 40px 0 10px;
+	transition: 0.3s ease all;
+}
+
+.form-input:focus {
+	border: 3px solid #0075ff;
+	outline: none;
+	box-shadow: 3px 0 30px rgba(163, 163, 163, 0.4);
+}
+
+.invalid-feedback {
+	font-size: 12px;
+	margin-bottom: 0;
+	display: none;
+}
+
+.invalid-feedback-active {
+	display: block;
+}
+
+.is-invalid {
+	position: absolute;
+	right: 10px;
+	bottom: 15px;
+	z-index: 10;
+	font-size: 16px;
+	opacity: 0;
+}
+
+input[type="checkbox"] {
+	margin-right: 10px;
+}
+
+.terms-group,
+.message,
+.btn-send {
+	grid-column: span 2;
+}
+
+.message {
+	height: 45px;
+	line-height: 45px;
+	background: #f66060;
+	padding: 0 15px;
+	border-radius: 3px;
+	display: none;
+}
+
+.message-active {
+	display: block;
+}
+
+.message p {
+	margin: 0;
+}
+
+.btn-send {
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+}
+
+.btn {
+	height: 45px;
+	line-height: 45px;
+	width: 30%;
+	background: #c5d5c5;
+	color: #000;
+	font-weight: bold;
+	border: none;
+	border-radius: 3px;
+	cursor: pointer;
+	transition: 0.1s ease all;
+}
+
+.btn:hover {
+	box-shadow: 3px 0 30px rgba(163, 163, 163, 1);
+}
+
+.success {
+	font-size: 16px;
+	color: #3b3a30;
+	display: none;
+}
+
+.success-active {
+	display: block;
+}
+
+/*Validation*/
+.form-group-success .is-invalid {
+	color: #1ed12d;
+	opacity: 1;
+}
+
+.form-group-danger .form-label {
+	color: #ff6f69;
+}
+
+.form-group-danger .is-invalid {
+	color: #ff6f69;
+	opacity: 1;
+}
+
+.form-group-danger input {
+	border: 3px solid #ff6f69;
+}
+
+/* Media queries */
+@media screen and (max-width: 800px) {
+	form {
+		grid-template-columns: 1fr;
+	}
+
+	.terms-group,
+	.message,
+	.btn-send {
+		grid-column: 1;
+	}
+
+	.btn {
+		width: 100%;
+	}
+}
